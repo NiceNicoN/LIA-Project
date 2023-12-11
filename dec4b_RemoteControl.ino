@@ -44,11 +44,11 @@ int IRResponseTime = 0;
 
 void Forward(int x,int y){  //Forward command  
   //motor A    
-  analogWrite (PWMA,y);    
+  analogWrite (PWMA,y);     //Motor A is powered at speed y
   digitalWrite (AIN1,1);    //The comand of 1(HIGH) makes the motor move forward
 
   //Motor B      
-  analogWrite (PWMB, y); 
+  analogWrite (PWMB, y);    //Motor A is powered at speed y
   digitalWrite (BIN1,1);    //The comand of 1(HIGH) makes the motor move forward
 } 
 
