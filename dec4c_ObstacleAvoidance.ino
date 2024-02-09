@@ -207,7 +207,7 @@ void loop() {
   // }
   
   if (distance <= 20){   //if true that the object is less than 20 cm in front of the car, run next line of code.
-    Standby();            ////Stop car
+    Standby();            ////Car Stops
     myservo.write(0);     ////Servo turn Right
     delay(200);            ///for 0.2 seconds
     Ultrasonic();         ////Run Ultrasonic command
@@ -220,7 +220,7 @@ void loop() {
       Ultrasonic();         ////Run Ultrasonic command
       delay(200);            ///for 0.2 seconds
     
-      if (distance > 20){                  //if false that the object is less than 20 cm to the left of the car, run next line of code.
+      if (distance > 20){    //if false that the object is less than 20 cm to the left of the car, run next line of code.
         Left(0,NormSPEED);    ////Car turns Left, at 100 speed
         delay(500);            ///for 0.5 seconds
         myservo.write(90);    ////Servo reajusts by turning Forward
