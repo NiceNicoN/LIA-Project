@@ -215,7 +215,6 @@ void loop() {
 
     if (distance <= 20){   //if true that the object is less than 20 cm to the right of the car, run next line of code.
       Standby();            ////Car Stops
-
       myservo.write(180);   ////Servo turn Left
       delay(200);            ///for 0.2 seconds
       Ultrasonic();         ////Run Ultrasonic command
