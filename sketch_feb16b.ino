@@ -3,7 +3,9 @@
 //This code uses the HC-SR04 Ultasonic Sensor to measure distance.//
 //Here it is paired with a SG90 Servo Motor to help it detect     //
 //obstacles in a field of 180°. This in turn helps the Elegoo Car //
-//avoid collisions, avoid and back out of corners.                //
+//to follow an object and eventualy another Elegoo Car.           //
+//Code available on: //
+//  //
 
 
 //Include the Servo Motor Library
@@ -197,7 +199,7 @@ float distance = Ultrasonic();
           delay(200);            ///for 0.2 seconds
         }
 
-        else{   //if true that the object is less than 20 cm to the left of the car, run next line of code.
+        else{   //if true that the object is less than 30 cm to the left of the car, run next line of code.
         Left(0,NormSPEED);   ////Car turns Right, at 100 speed
         delay(200);           ///for 1 second
         myservo.write(90);    ////Servo reajusts by turning Forward
@@ -207,7 +209,7 @@ float distance = Ultrasonic();
         }
       }
 
-      else{                  //if true that Mommy is less than 20 cm in front of the Duck, run next line of code.
+      else{                  //if true that Mommy is less than 30 cm in front of the Duck, run next line of code.
         Forward(0,NormSPEED); ////Duck goes Forward, at 100 speed
         delay(200);            ///for 0.2 seconds
         myservo.write(90);    ////Servo reajusts by turning Forward
