@@ -83,28 +83,28 @@ void Left(int x,int y){ //Left command
   // causing the Car to spin to the Left in the same spot.
 }   
 
-void Right(int NormSPEED){ //Right command  
+//void Right(int NormSPEED){ //Right command  
   //motor A    
-  analogWrite (PWMA, NormSPEED);     
-  digitalWrite (AIN1,1);    
+  //analogWrite (PWMA, NormSPEED);     
+  //digitalWrite (AIN1,1);    
 
   //Motor B    
-  analogWrite(PWMB, NormSPEED);    
-  digitalWrite (BIN1,0);
-}
+  //analogWrite(PWMB, NormSPEED);    
+  //digitalWrite (BIN1,0);
+//}
 
-//void Right(int x,int y){ //Right command  
+void Right(int x,int y){ //Right command  
   //motor A    
-  //analogWrite (PWMA,y);     //Motor A is powered at speed y
-  //digitalWrite (AIN1,1);    //The comand of 1(HIGH) makes motor A move forward
+  analogWrite (PWMA,y);     //Motor A is powered at speed y
+  digitalWrite (AIN1,1);    //The comand of 1(HIGH) makes motor A move forward
 
   //Motor B    
-  //analogWrite(PWMB, y);     //Motor B is powered at speed y
-  //digitalWrite (BIN1,0);    //The comand of 0(LOW) makes motor B move backward
+  analogWrite(PWMB, y);     //Motor B is powered at speed y
+  digitalWrite (BIN1,0);    //The comand of 0(LOW) makes motor B move backward
 
   // In the case of the Right command, Motor A is moving forward at full speed and Motor B is moving backwards at full speed
   // causing the Car to spin to the Right in the same spot.
-//}   
+}   
 
 void LeftForward(int x,int y){   //Left Forward command
   //motor A  
